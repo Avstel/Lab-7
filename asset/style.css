@@ -1,19 +1,16 @@
-
-*, *::after, *::before{
+*, *::after, *::before {
     box-sizing: border-box;
-    font-family: Gotham Rounded, sans-serif;
-}
-
-.clock{
+  }
+  .clock {
     width: 300px;
-    height:  300px;
-    background-color: rgba(170, 90, 20, 0.8);
+    height: 300px;
+    background-color: rgba(190, 90, 20, .8);
     border-radius: 50%;
-    border: 3px solid black;
+    border: 2px solid black;
     position: relative;
-}
-
-.clock .number {
+  }
+  
+  .clock .number {
     --rotation: 0;
     position: absolute;
     width: 100%;
@@ -21,20 +18,21 @@
     text-align: center;
     transform: rotate(var(--rotation));
     font-size: 1.5rem;
-}
-.clock .number1 { --rotation: 30deg; }
-.clock .number2 { --rotation: 60deg; }
-.clock .number3 { --rotation: 90deg; }
-.clock .number4 { --rotation: 120deg; }
-.clock .number5 { --rotation: 150deg; }
-.clock .number6 { --rotation: 180deg; }
-.clock .number7 { --rotation: 210deg; }
-.clock .number8 { --rotation: 240deg; }
-.clock .number9 { --rotation: 270deg; }
-.clock .number10 { --rotation: 300deg; }
-.clock .number11 { --rotation: 330deg; }
-
-.clock .hand {
+  }
+  
+  .clock .number1 { --rotation: 30deg; }
+  .clock .number2 { --rotation: 60deg; }
+  .clock .number3 { --rotation: 90deg; }
+  .clock .number4 { --rotation: 120deg; }
+  .clock .number5 { --rotation: 150deg; }
+  .clock .number6 { --rotation: 180deg; }
+  .clock .number7 { --rotation: 210deg; }
+  .clock .number8 { --rotation: 240deg; }
+  .clock .number9 { --rotation: 270deg; }
+  .clock .number10 { --rotation: 300deg; }
+  .clock .number11 { --rotation: 330deg; }
+  
+  .clock .hand {
     --rotation: 0;
     position: absolute;
     bottom: 50%;
@@ -44,11 +42,11 @@
     border-top-right-radius: 10px;
     transform-origin: bottom;
     z-index: 10;
-    transform: translateX(-50%) rotate(calc(var(--rotation)) * 1deg)  ;
-}
-
-.clock::after {
-    content:  ' ';
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  
+  .clock::after {
+    content: '';
     position: absolute;
     background-color: black;
     z-index: 11;
@@ -58,20 +56,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-}
-
-.clock .hand.second {
+  }
+  
+  .clock .hand.second {
     width: 3px;
-    height: 45%;
+    height: 47%;
     background-color: red;
-}
-.clock .hand.minute{
-    width: 7px;
+  }
+  
+  .clock .hand.minute {
+    width: 8px;
     height: 40%;
     background-color: black;
-}
-.clock .hand.second {
-    width: 10px;
-    height: 35%;
+  }
+  .clock .hand.hour {
+    width: 12px;
+    height: 30%;
     background-color: black;
-}
+  }
